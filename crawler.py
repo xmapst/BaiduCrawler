@@ -40,6 +40,7 @@ def downLoadHtml(word):
     url = 'http://www.baidu.com.cn/s?wd=' + urllib.parse.quote(word) + '&pn='
     # 多线程爬取，多个页面同时爬
     pool = multiprocessing.Pool(multiprocessing.cpu_count())
+    # 获取9个查询页面
     for page in range(1, 10):
         result = pool.apply_async(dataDict, (url, page))
 
@@ -49,6 +50,7 @@ def downLoadHtml(word):
 def dataDict(url, page):
     # 获取每个页面的数据
     data_dict = {}
+    # 页面链接, 百度每个页面为10-11个查询结果
     path = url + str((page - 1) * 10)
     req = request.Request(url=path, headers=headers)
     response = request.urlopen(req)
