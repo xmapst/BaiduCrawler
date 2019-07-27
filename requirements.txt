@@ -1,0 +1,4 @@
+fake_useragent==0.1.11
+requests==2.12.5
+redis==3.2.1
+beautifulsoup4==4.8.0
