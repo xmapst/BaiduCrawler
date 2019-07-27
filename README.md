@@ -15,7 +15,7 @@ setsid crawler.py
 #### 返回效果：
 ====返回各字段解析====：
 ```
-# 返回一个字典
+# 返回字典，一条记录一个
 {'title': '标题', 'url': '百度快照URL/百度推广URL', 'real_url': '最终目标URL', 'type': '快照/推广 （ordinary/promotion）'}
 ```
 ==== 如图 ====：
