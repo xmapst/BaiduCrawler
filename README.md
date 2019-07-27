@@ -1,5 +1,5 @@
 # BaiduCrawler
-Baidu crawler, you can climb to search content, promote links
+BaiDu搜索爬虫，可以爬到搜索内容和该关键字的推广链接
 
 #### 使用方法：
 环境：python >= 3.6.x  pip3工具
@@ -8,6 +8,9 @@ git clone https://github.com/xmapst/BaiduCrawler.git
 cd BaiduCrawler
 pip3 install -r requirements.txt
 python3 crawler.py
+# 后台运行方法
+# chmod +x crawler.py
+setsid crawler.py
 ```
 #### 返回效果：
 ====返回各字段解析====：
