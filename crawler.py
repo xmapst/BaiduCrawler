@@ -35,6 +35,8 @@ headers = {
     'User-Agent': UA.chrome
 }
 
+global keyword_dict
+
 def downLoadHtml(word):
     # 下载查询网页
     url = 'http://www.baidu.com.cn/s?wd=' + urllib.parse.quote(word) + '&pn='
@@ -99,7 +101,6 @@ def main():
     cn.close()
 
 if __name__ == '__main__':
-    global keyword_dict
     keyword_dict = 'samples.txt'
     #### 死循环查询
     #while True:
