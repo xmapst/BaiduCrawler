@@ -35,7 +35,7 @@ headers = {
     'User-Agent': UA.chrome
 }
 
-global keyword_dict
+global keywordDict
 
 def downLoadHtml(word):
     # 下载查询网页
@@ -94,14 +94,14 @@ def dataDict(url, page):
             print(data_dict)
 
 def main():
-    cn = open(keyword_dict, 'r',encoding='utf8')
+    cn = open(keywordDict, 'r',encoding='utf8')
     # 循环关键字列表，对每个关键字进行查询匹配
     for line in cn:
         result = downLoadHtml(line.strip())
     cn.close()
 
 if __name__ == '__main__':
-    keyword_dict = 'samples.txt'
+    keywordDict = 'samples.txt'
     #### 死循环查询
     #while True:
     #    main()
