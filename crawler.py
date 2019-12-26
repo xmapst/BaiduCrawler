@@ -60,8 +60,6 @@ def dataDict(url, page):
     gzipped = response.headers.get('Content-Encoding')
     if gzipped:
         page = zlib.decompress(page, 16+zlib.MAX_WBITS)
-    else:
-        page = page
     
     # 利用BeautifulSoup快速提取数据
     soup = BeautifulSoup(page, 'lxml')
