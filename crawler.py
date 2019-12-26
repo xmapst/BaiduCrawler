@@ -35,8 +35,6 @@ headers = {
     'User-Agent': UA.chrome
 }
 
-global keywordDict
-
 def downLoadHtml(word):
     # 下载查询网页
     url = 'http://www.baidu.com.cn/s?wd=' + urllib.parse.quote(word) + '&pn='
@@ -94,14 +92,14 @@ def dataDict(url, page):
             print(data_dict)
 
 def main():
-    cn = open(keywordDict, 'r',encoding='utf8')
+    cn = open(keyword_dict, 'r',encoding='utf8')
     # 循环关键字列表，对每个关键字进行查询匹配
     for line in cn:
         result = downLoadHtml(line.strip())
     cn.close()
 
 if __name__ == '__main__':
-    keywordDict = 'samples.txt'
+    global keyword_dict = 'samples.txt'
     #### 死循环查询
     #while True:
     #    main()
